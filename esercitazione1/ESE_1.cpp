@@ -1,6 +1,6 @@
 #include <fstream>
 #include <iostream>
-
+#include <sstream>
 int main(int argc, const char *argv[]) {
 if (argc <2) {
     std::cerr << "Error: filename not specified\n";
@@ -23,7 +23,8 @@ if (ifs.is_open()){
     }
     }
 else {
-std::cerr << "Error: file " << argv[i] <<" not found\n";
+std::cerr << "Error: file " << argv[i] <<" not found\n";;
+
 return 2;
 }}
 return 0;
