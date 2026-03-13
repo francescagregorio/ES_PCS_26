@@ -135,7 +135,6 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o: /home/pcsdocker/Data/ES_PCS_26/esercitazio
   /usr/include/c++/14/bits/ranges_util.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
-  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -180,7 +179,6 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o: /home/pcsdocker/Data/ES_PCS_26/esercitazio
   /usr/include/c++/14/numbers \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
-  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
@@ -231,7 +229,8 @@ myproject: /lib/aarch64-linux-gnu/libc.so.6 \
   /usr/lib/gcc/aarch64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/aarch64-linux-gnu/14/libgcc_s.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so \
-  CMakeFiles/myproject.dir/ESE_1.cpp.o
+  CMakeFiles/myproject.dir/ESE_1.cpp.o \
+  CMakeFiles/myproject.dir/printargvs.cpp.o
 
 
 CMakeFiles/myproject.dir/ESE_1.cpp.o:
@@ -344,8 +343,6 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o:
 
 /usr/include/c++/14/bits/std_abs.h:
 
-/usr/include/c++/14/bits/sstream.tcc:
-
 /usr/include/c++/14/iostream:
 
 /usr/include/c++/14/bits/requires_hosted.h:
@@ -412,8 +409,6 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o:
 
 /usr/include/c++/14/bits/postypes.h:
 
-/usr/include/c++/14/sstream:
-
 /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
@@ -465,6 +460,8 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o:
 /usr/include/c++/14/ext/atomicity.h:
 
 /usr/include/aarch64-linux-gnu/bits/libc-header-start.h:
+
+CMakeFiles/myproject.dir/printargvs.cpp.o:
 
 /usr/lib/gcc/aarch64-linux-gnu/14/crtbeginS.o:
 

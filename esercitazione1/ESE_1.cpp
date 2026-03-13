@@ -1,16 +1,18 @@
 #include <fstream>
 #include <iostream>
-#include <sstream>
+//per evitare di scrivere sempre std:: avrei potuto utilizzare using namespace std
 int main(int argc, const char *argv[]) {
 if (argc <2) {
     std::cerr << "Error: filename not specified\n";
     return 1;
 }
-for (int i = 1; i < argc; i ++){
-    // gestisco il fatto che in input possa mettere più di un nome di file
-std:: ifstream ifs(argv[i]);
+//dal testo dell'esercitazione posso assumere che ci sia solo un file
+std:: ifstream ifs(argv[1]);
 if (ifs.is_open()){
-    for(i = 0; i <= 2; i++){
+    //assumo, come da indicazioni del docente, che il file sia formattato come nell'esempio fornito
+    for(int i = 0; i <= 2; i++){
+        
+       
         std:: string location;
         double temp1;
         double temp2;
@@ -18,14 +20,13 @@ if (ifs.is_open()){
         double temp4;
         ifs >> location >> temp1 >> temp2 >> temp3 >> temp4;
         double average = (temp1+temp2+temp3+temp4)/4.0;
-        std::cout << location<< "       " << average << "\n" ;
-        
-    }
+        std::cout << location<< " " << average << "\n" ;
+        }
     }
 else {
-std::cerr << "Error: file " << argv[i] <<" not found\n";;
+std::cerr << "Error: file " << argv[1] <<" not found\n";;
 
 return 2;
-}}
+}
 return 0;
 }

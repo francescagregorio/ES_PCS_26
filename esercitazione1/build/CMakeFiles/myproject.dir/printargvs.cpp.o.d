@@ -1,6 +1,6 @@
-CMakeFiles/myproject.dir/ESE_1.cpp.o: \
- /home/pcsdocker/Data/ES_PCS_26/esercitazione1/ESE_1.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/14/fstream \
+CMakeFiles/myproject.dir/printargvs.cpp.o: \
+ /home/pcsdocker/Data/ES_PCS_26/esercitazione1/printargvs.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/os_defines.h \
@@ -12,7 +12,7 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o: \
  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/cpu_defines.h \
- /usr/include/c++/14/pstl/pstl_config.h /usr/include/c++/14/istream \
+ /usr/include/c++/14/pstl/pstl_config.h /usr/include/c++/14/ostream \
  /usr/include/c++/14/ios /usr/include/c++/14/iosfwd \
  /usr/include/c++/14/bits/stringfwd.h \
  /usr/include/c++/14/bits/memoryfwd.h /usr/include/c++/14/bits/postypes.h \
@@ -161,9 +161,6 @@ CMakeFiles/myproject.dir/ESE_1.cpp.o: \
  /usr/include/c++/14/bits/streambuf_iterator.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/ctype_inline.h \
  /usr/include/c++/14/bits/locale_facets.tcc \
- /usr/include/c++/14/bits/basic_ios.tcc /usr/include/c++/14/ostream \
- /usr/include/c++/14/bits/ostream.tcc \
- /usr/include/c++/14/bits/istream.tcc /usr/include/c++/14/bits/codecvt.h \
- /usr/include/aarch64-linux-gnu/c++/14/bits/basic_file.h \
- /usr/include/aarch64-linux-gnu/c++/14/bits/c++io.h \
- /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/iostream
+ /usr/include/c++/14/bits/basic_ios.tcc \
+ /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
+ /usr/include/c++/14/bits/istream.tcc

@@ -216,6 +216,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+myproject,_BINARY_DIR:STATIC=/home/pcsdocker/Data/ES_PCS_26/esercitazione1/build
+
+//Value Computed by CMake
+myproject,_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+myproject,_SOURCE_DIR:STATIC=/home/pcsdocker/Data/ES_PCS_26/esercitazione1
+
+//Value Computed by CMake
 myproject_BINARY_DIR:STATIC=/home/pcsdocker/Data/ES_PCS_26/esercitazione1/build
 
 //Value Computed by CMake
