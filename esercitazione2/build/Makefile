@@ -129,6 +129,19 @@ myproject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
 .PHONY : myproject/fast
 
+#=============================================================================
+# Target rules for targets named bubble_proj
+
+# Build rule for target.
+bubble_proj: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bubble_proj
+.PHONY : bubble_proj
+
+# fast build rule for target.
+bubble_proj/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_proj.dir/build.make CMakeFiles/bubble_proj.dir/build
+.PHONY : bubble_proj/fast
+
 ESE2_2.o: ESE2_2.cpp.o
 .PHONY : ESE2_2.o
 
@@ -153,6 +166,30 @@ ESE2_2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/ESE2_2.cpp.s
 .PHONY : ESE2_2.cpp.s
 
+bubblesort.o: bubblesort.cpp.o
+.PHONY : bubblesort.o
+
+# target to build an object file
+bubblesort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_proj.dir/build.make CMakeFiles/bubble_proj.dir/bubblesort.cpp.o
+.PHONY : bubblesort.cpp.o
+
+bubblesort.i: bubblesort.cpp.i
+.PHONY : bubblesort.i
+
+# target to preprocess a source file
+bubblesort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_proj.dir/build.make CMakeFiles/bubble_proj.dir/bubblesort.cpp.i
+.PHONY : bubblesort.cpp.i
+
+bubblesort.s: bubblesort.cpp.s
+.PHONY : bubblesort.s
+
+# target to generate assembly for a file
+bubblesort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_proj.dir/build.make CMakeFiles/bubble_proj.dir/bubblesort.cpp.s
+.PHONY : bubblesort.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... bubble_proj"
 	@echo "... myproject"
 	@echo "... ESE2_2.o"
 	@echo "... ESE2_2.i"
 	@echo "... ESE2_2.s"
+	@echo "... bubblesort.o"
+	@echo "... bubblesort.i"
+	@echo "... bubblesort.s"
 .PHONY : help
 
 
