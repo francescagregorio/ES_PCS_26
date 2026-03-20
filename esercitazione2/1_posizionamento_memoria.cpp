@@ -23,13 +23,13 @@ int main()
      //y sembra sempre essere uno scalare
 
      //provo a stampare alcuni indirizzi degli elementi degli array
-     std::cout << &ad[0] << "\n";
-     std::cout <<&af[0] << "\n";
-     std::cout << &ai[0] <<"\n";
+     std::cout <<"&ad[0] -->  "<< &ad[0] << "\n";
+     std::cout <<"&af[0] --> "<<&af[0] << "\n";
+     std::cout << "&ai[0] --> " << &ai[0] <<"\n";
      //stampo l'indirizzo di x in memoria
-     std::cout << &x << "\n";
+     std::cout << "&x --> "<< &x << "\n";
      //stampo l'indirizzo di y in memoria 
-     std::cout << &y << "\n";
+     std::cout << "&y --> " << &y << "\n";
  
      return 0; 
 }

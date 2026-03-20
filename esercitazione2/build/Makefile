@@ -142,6 +142,43 @@ bubble_proj/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_proj.dir/build.make CMakeFiles/bubble_proj.dir/build
 .PHONY : bubble_proj/fast
 
+#=============================================================================
+# Target rules for targets named posiz_memo
+
+# Build rule for target.
+posiz_memo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 posiz_memo
+.PHONY : posiz_memo
+
+# fast build rule for target.
+posiz_memo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/posiz_memo.dir/build.make CMakeFiles/posiz_memo.dir/build
+.PHONY : posiz_memo/fast
+
+1_posizionamento_memoria.o: 1_posizionamento_memoria.cpp.o
+.PHONY : 1_posizionamento_memoria.o
+
+# target to build an object file
+1_posizionamento_memoria.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/posiz_memo.dir/build.make CMakeFiles/posiz_memo.dir/1_posizionamento_memoria.cpp.o
+.PHONY : 1_posizionamento_memoria.cpp.o
+
+1_posizionamento_memoria.i: 1_posizionamento_memoria.cpp.i
+.PHONY : 1_posizionamento_memoria.i
+
+# target to preprocess a source file
+1_posizionamento_memoria.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/posiz_memo.dir/build.make CMakeFiles/posiz_memo.dir/1_posizionamento_memoria.cpp.i
+.PHONY : 1_posizionamento_memoria.cpp.i
+
+1_posizionamento_memoria.s: 1_posizionamento_memoria.cpp.s
+.PHONY : 1_posizionamento_memoria.s
+
+# target to generate assembly for a file
+1_posizionamento_memoria.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/posiz_memo.dir/build.make CMakeFiles/posiz_memo.dir/1_posizionamento_memoria.cpp.s
+.PHONY : 1_posizionamento_memoria.cpp.s
+
 ESE2_2.o: ESE2_2.cpp.o
 .PHONY : ESE2_2.o
 
@@ -200,6 +237,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bubble_proj"
 	@echo "... myproject"
+	@echo "... posiz_memo"
+	@echo "... 1_posizionamento_memoria.o"
+	@echo "... 1_posizionamento_memoria.i"
+	@echo "... 1_posizionamento_memoria.s"
 	@echo "... ESE2_2.o"
 	@echo "... ESE2_2.i"
 	@echo "... ESE2_2.s"

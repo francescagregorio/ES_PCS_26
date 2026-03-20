@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wshadow -Werror=vla -Wl,--dependency-file=CMakeFiles/posiz_memo.dir/link.d CMakeFiles/posiz_memo.dir/1_posizionamento_memoria.cpp.o -o posiz_memo

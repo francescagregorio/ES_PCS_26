@@ -1,4 +1,5 @@
 /home/pcsdocker/Data/ES_PCS_26/esercitazione2/build/CMakeFiles/myproject.dir
 /home/pcsdocker/Data/ES_PCS_26/esercitazione2/build/CMakeFiles/bubble_proj.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione2/build/CMakeFiles/posiz_memo.dir
 /home/pcsdocker/Data/ES_PCS_26/esercitazione2/build/CMakeFiles/edit_cache.dir
 /home/pcsdocker/Data/ES_PCS_26/esercitazione2/build/CMakeFiles/rebuild_cache.dir

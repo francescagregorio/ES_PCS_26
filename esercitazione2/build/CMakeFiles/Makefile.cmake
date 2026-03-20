@@ -56,4 +56,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/myproject.dir/DependInfo.cmake"
   "CMakeFiles/bubble_proj.dir/DependInfo.cmake"
+  "CMakeFiles/posiz_memo.dir/DependInfo.cmake"
   )
