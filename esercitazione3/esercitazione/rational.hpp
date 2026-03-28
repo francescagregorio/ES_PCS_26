@@ -1,6 +1,7 @@
 #pragma once
 #include <concepts>
-#include <algorithm>
+#include <ostream>
+#include <numeric>
 template<typename I> requires std::integral<I> 
 class rational 
 { 
@@ -26,7 +27,6 @@ class rational
         num_ = num_ / g;
         den_ = den_ /g;
     }
-    bool is_nan() const{}
 /* Costruisco dei */
 public:
     /* Costruttore di default che rappresenta 0/1 */
@@ -36,7 +36,7 @@ public:
     /* Costruttore user-defined*/
     /*n/0 = + inf, -n/0 = -inf se n >0 e 0/0 = NaN */
     rational(const I& n, const I& d)
-        : num_(n), num_(d)
+        : num_(n), den_(d)
     {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa*/
         if (d != I{0}) {
             reduce();
@@ -57,7 +57,7 @@ public:
         /* Inf + (- Inf) = NaN; Inf + Inf = Inf*/
         if ((num_ != I{0} && den_ == I{0}) && (other.num_ != I{0} && other.den_ == I{0})){
             /*Inf + (-Inf)*/
-            if ((num_ > I{0} && other.num_ < I{0}) || (num_ < I{0} && other.num > I{0})){
+            if ((num_ > I{0} && other.num_ < I{0}) || (num_ < I{0} && other.num_ > I{0})){
                 num_ = I{0};  
                 return *this;  
             }
@@ -69,7 +69,7 @@ public:
             return *this; //già incluso
         }
         //ho esaurito i casi in cui den_ == I{0}, d'ora in poi sarà sempre !=
-        if (other.num_ != I{0} && other.den_ == {0}){
+        if (other.num_ != I{0} && other.den_ == I{0}){
             num_ = other.num_;
             den_ = I{0};
             return *this;
@@ -79,7 +79,7 @@ public:
         num_ = num_*other.den_ + other.num_*den_;
         den_ = den_ * other.den_;
         reduce();
-        return *this
+        return *this;
     }
     /*implementazione della somma*/
     rational operator+(const rational& other) const{
@@ -100,7 +100,7 @@ public:
     }
     rational& operator*=(const rational& other) {
         /*NaN * qualsiasi cosa = NaN*/
-        if ((num_ == I{0} && den_ = I{0}) || other.num_ == I{0} && other.den_ == I{0}){
+        if ((num_ == I{0} && den_ == I{0}) || (other.num_ == I{0} && other.den_ == I{0})){
             num_ = I{0};
             den_ = I{0};
             return *this;
@@ -164,14 +164,21 @@ operator<<(std::ostream &os, const rational<I>& r)
             os << "NaN";   
         }
         if (r.num() > I{0}){
-            os << "+ Inf"
+            os << "+ Inf";
         }
-        if{r.num()< I{0}} {
-            os << "- Inf"
+        if(r.num()< I{0}) {
+            os << "- Inf";
         }
     }
-    else {
-       os << r.num() << "/" << r.den() 
+    else if (r.den() == I{1}) {
+            os << r.num(); //gestione degli interi
     }
+    else if (r.num() == I{0}) {
+        os << 0; //gestione dello zero
+    }
+    else{
+        os << r.num() << "/" << r.den();
+    }
+    
     return os;
 }
