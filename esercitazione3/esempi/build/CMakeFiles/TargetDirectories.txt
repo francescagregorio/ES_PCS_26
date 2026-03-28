@@ -1,0 +1,4 @@
+/home/pcsdocker/Data/ES_PCS_26/esercitazione3/punto1/build/CMakeFiles/main_h.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione3/punto1/build/CMakeFiles/vec2.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione3/punto1/build/CMakeFiles/edit_cache.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione3/punto1/build/CMakeFiles/rebuild_cache.dir
