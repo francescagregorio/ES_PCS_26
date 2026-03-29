@@ -1,13 +1,12 @@
 #pragma once
 #include <concepts>
-#include <ostream>
 #include <numeric>
-template<typename I> requires std::integral<I> 
-class rational 
-{ 
-    I num_; 
-    I den_; 
-    /* Creo una funzione per la semplificazione che riguarda solo il caso den_ != 0*/
+#include <ostream>
+
+template<typename I> requires std::integral<I>
+class rational{
+    I num_;
+    I den_;
     void reduce(){
         /* voglio il segno al numeratore */
         if (den_ < I{0}){
@@ -26,40 +25,61 @@ class rational
         num_ = num_ / g;
         den_ = den_ /g;
     }
-    /* In alternativa alle condizioni usate negli if che seguono, attraverso le quali tratto implicitamente 0/0 come NaN, N/0 come Inf, -N/0 come -Inf, 
-    avrei potuto costruire delle variabili di tipo bool per trattare i casi NaN e Inf */
-public:
-    /* Costruttore di default che rappresenta 0/1 */
-    rational()
-        : num_(I{0}), den_(I{1})
-    {}
+    bool is_nan() const { //il const dopo le parentesi indica che il metodo non modifica l'oggetto su cui è chiamato
+        if (num_ == I{0} && den_== I{0}){
+            return true;
+            }
+        return false;
+    }
+    bool is_pinf() const{
+        if(num_>I{0} && den_ == I{0}){
+            return true;
+        }
+        return false;
+    }
+    bool is_minf() const{
+        if (num_<I{0} && den_ == I{0}){
+            return true;
+        }
+        return false;
+    }
+    bool is_fin() const{
+        if( den_ != I{0}){
+            return true;
+        }
+        return false;
+    }
+    public:
+        /* Costruttore di default che rappresenta 0/1 */
+        rational()
+            : num_(I{0}), den_(I{1})
+        {}
     /* Costruttore user-defined*/
     /*n/0 = + inf, -n/0 = -inf se n >0 e 0/0 = NaN */
-    rational(const I& n, const I& d)
-        : num_(n), den_(d)
-    {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa; avrei anche potuto gestire gli if con dei bool*/
-        if (d != I{0}) {
-            reduce();
-        }      
-    }
+        rational(const I& n, const I& d)
+            : num_(n), den_(d)
+        {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa; avrei anche potuto gestire gli if con dei bool*/
+            if (d != I{0}) {
+                reduce();
+            }      
+        }
     I num() const {return num_;}
     I den() const {return den_; }
-
-    /* Implementazone incremento =+ */
+        /* Implementazone incremento =+ */
     rational& operator+=(const rational& other) {
         /* Devo trattare tutti i casi possibili*/
         /*NaN + qualsiasi cosa = NaN*/
         /*in alternativa, avrei potuto costruire delle variabili booleane del tipo
         bool isnan*/
-        if ((num_ == I{0} && den_ == I{0}) || (other.num_ == I{0} && other.den_ == I{0})){
+        if (is_nan() || other.is_nan()){
             num_ = I{0};
             den_ = I{0};
             return *this;
         }
         /* Inf + (- Inf) = NaN; Inf + Inf = Inf*/
-        if ((num_ != I{0} && den_ == I{0}) && (other.num_ != I{0} && other.den_ == I{0})){
+        if ((is_pinf() || is_minf()) && (other.is_pinf() || other.is_minf())){
             /*Inf + (-Inf)*/
-            if ((num_ > I{0} && other.num_ < I{0}) || (num_ < I{0} && other.num_ > I{0})){
+            if ((is_pinf()&& other.is_minf()) || (is_minf() && other.is_pinf())){
                 num_ = I{0};  
                 return *this;  
             }
@@ -67,11 +87,11 @@ public:
             return *this;
         }
         /*finito & infinito = infinito, ma devo distinguere se l'inf riguarda other*/
-        if (num_ != I{0} && den_ == I{0}){
+        if (is_pinf() || is_minf()){
             return *this; //già incluso
         }
         //ho esaurito i casi in cui den_ == I{0}, d'ora in poi sarà sempre !=
-        if (other.num_ != I{0} && other.den_ == I{0}){
+        if (other.is_pinf() || other.is_minf()){
             num_ = other.num_;
             den_ = I{0};
             return *this;
@@ -102,19 +122,19 @@ public:
     }
     rational& operator*=(const rational& other) {
         /*NaN * qualsiasi cosa = NaN*/
-        if ((num_ == I{0} && den_ == I{0}) || (other.num_ == I{0} && other.den_ == I{0})){
+        if (is_nan() || other.is_nan()){
             num_ = I{0};
             den_ = I{0};
             return *this;
         }
         /* 0* Inf = NaN + ho esaurito i casi in cui uno dei due fattori è NaN*/
-        if ((num_ == I{0} && other.den_ == I{0}) || (den_ == I{0} && other.num_ == I{0})) {
+        if ((num_ == I{0} && (other.is_pinf() || other.is_minf())) || ((is_pinf()|| is_minf())&& other.num_ == I{0})) {
             num_ = I{0};
             den_ = I{0};
             return *this;
         }
         /* Inf * qualsiasi cosa non nulla e non NaN(incluso Inf) = Inf, ma occorre fare attenzione al segno*/
-        if (den_ == I{0} || other.den_ == I{0}) {
+        if ((is_pinf()||is_minf())|| (other.is_pinf()||other.is_minf())) {
             //studio del segno
             bool positivo = (num_*other.num_ > I{0});
             if (positivo) {
@@ -159,28 +179,25 @@ public:
 /* overload di << + tratto den = 0 */
 template <typename I> requires std::integral<I>
 std::ostream& 
-operator<<(std::ostream &os, const rational<I>& r)
-{
-    if (r.den() == I{0}){
-        if (r.num() == I{0}){
-            os << "NaN";   
-        }
-        if (r.num() > I{0}){
-            os << "+ Inf";
-        }
-        if(r.num()< I{0}) {
-            os << "- Inf";
-        }
+operator<<(std::ostream &os, const rational<I>& r){
+    bool nan (r.num() == I{0} && r.den()== I{0});
+    bool pinf (r.num()>I{0} && r.den() == I{0});
+    bool minf (r.num()<I{0} && r.den()==I{0});
+    bool nint (r.den()==I{1});
+    if (nan){
+        os <<"NaN";
     }
-    else if (r.den() == I{1}) {
-            os << r.num(); //gestione degli interi
+    else if (pinf){
+        os << "+Inf";
     }
-    else if (r.num() == I{0}) {
-        os << 0; //gestione dello zero
+    else if (minf){
+        os << "-Inf";
+    }
+    else if (nint){
+        os << r.num();
     }
     else{
-        os << r.num() << "/" << r.den();
+        os << r.num()<<"/"<<r.den();
     }
-    
     return os;
 }
