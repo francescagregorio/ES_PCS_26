@@ -7,13 +7,13 @@ class rational
 { 
     I num_; 
     I den_; 
-    /* Creo una funzione per la semplificazione e per trattare den_ = 0*/
+    /* Creo una funzione per la semplificazione che riguarda solo il caso den_ != 0*/
     void reduce()
     {
         /* voglio il segno al numeratore */
         if (den_ < I{0}){
-            num_ = -num_ ;
-            den_ = -den_;
+            num_ = -I{1}*num_ ;
+            den_ = -I{1} * den_;
         }
         if (den_ == I{0}) {//non normalizzo
             return;
@@ -27,7 +27,8 @@ class rational
         num_ = num_ / g;
         den_ = den_ /g;
     }
-/* Costruisco dei */
+    /* In alternativa alle condizioni usate negli if che seguono, avrei potuto costruire 
+    delle variabili di tipo bool per trattare i casi NaN e Inf*/
 public:
     /* Costruttore di default che rappresenta 0/1 */
     rational()
@@ -37,7 +38,7 @@ public:
     /*n/0 = + inf, -n/0 = -inf se n >0 e 0/0 = NaN */
     rational(const I& n, const I& d)
         : num_(n), den_(d)
-    {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa*/
+    {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa; avrei anche potuto gestire gli if con dei bool*/
         if (d != I{0}) {
             reduce();
         }      
@@ -49,6 +50,8 @@ public:
     rational& operator+=(const rational& other) {
         /* Devo trattare tutti i casi possibili*/
         /*NaN + qualsiasi cosa = NaN*/
+        /*in alternativa, avrei potuto costruire delle variabili booleane del tipo
+        bool isnan*/
         if ((num_ == I{0} && den_ == I{0}) || (other.num_ == I{0} && other.den_ == I{0})){
             num_ = I{0};
             den_ = I{0};
