@@ -25,7 +25,23 @@ class rational{
         num_ = num_ / g;
         den_ = den_ /g;
     }
-    bool is_nan() const { //il const dopo le parentesi indica che il metodo non modifica l'oggetto su cui è chiamato
+    public:
+        /* Costruttore di default che rappresenta 0/1 */
+        rational()
+            : num_(I{0}), den_(I{1})
+        {}
+    /* Costruttore user-defined*/
+    /*n/0 = + inf, -n/0 = -inf se n >0 e 0/0 = NaN */
+        rational(const I& n, const I& d)
+            : num_(n), den_(d)
+        {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa; avrei anche potuto gestire gli if con dei bool*/
+            if (d != I{0}) {
+                reduce();
+            }      
+        }
+    I num() const {return num_;}
+    I den() const {return den_; }
+        bool is_nan() const { //il const dopo le parentesi indica che il metodo non modifica l'oggetto su cui è chiamato
         if (num_ == I{0} && den_== I{0}){
             return true;
             }
@@ -43,28 +59,6 @@ class rational{
         }
         return false;
     }
-    bool is_fin() const{
-        if( den_ != I{0}){
-            return true;
-        }
-        return false;
-    }
-    public:
-        /* Costruttore di default che rappresenta 0/1 */
-        rational()
-            : num_(I{0}), den_(I{1})
-        {}
-    /* Costruttore user-defined*/
-    /*n/0 = + inf, -n/0 = -inf se n >0 e 0/0 = NaN */
-        rational(const I& n, const I& d)
-            : num_(n), den_(d)
-        {/*devo semplificare e gestire il caso den_ !=  0, per il caso den_ = 0 farò degli if e modificherò in stampa; avrei anche potuto gestire gli if con dei bool*/
-            if (d != I{0}) {
-                reduce();
-            }      
-        }
-    I num() const {return num_;}
-    I den() const {return den_; }
         /* Implementazone incremento =+ */
     rational& operator+=(const rational& other) {
         /* Devo trattare tutti i casi possibili*/
@@ -180,17 +174,15 @@ class rational{
 template <typename I> requires std::integral<I>
 std::ostream& 
 operator<<(std::ostream &os, const rational<I>& r){
-    bool nan (r.num() == I{0} && r.den()== I{0});
-    bool pinf (r.num()>I{0} && r.den() == I{0});
-    bool minf (r.num()<I{0} && r.den()==I{0});
+    
     bool nint (r.den()==I{1});
-    if (nan){
+    if (r.is_nan()){
         os <<"NaN";
     }
-    else if (pinf){
+    else if (r.is_pinf()){
         os << "+Inf";
     }
-    else if (minf){
+    else if (r.is_minf()){
         os << "-Inf";
     }
     else if (nint){

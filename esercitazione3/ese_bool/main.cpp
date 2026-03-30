@@ -18,7 +18,7 @@ int main(){
     std::cout << "-6/0 = " << r6 << "\n";
     std::cout <<"default = "<< r7 << "\n";
     /*addizione*/
-    std::cout << "Addizione";
+    std::cout << "Addizione\n";
     rational<int> a(3,9);
     rational<int> b(1,2);
     std::cout << "3/9 + 1/2 = " << (a + b) << "\n";
