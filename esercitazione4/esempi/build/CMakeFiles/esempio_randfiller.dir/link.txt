@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wshadow -Werror=vla -Wno-sign-compare -Wl,--dependency-file=CMakeFiles/esempio_randfiller.dir/link.d CMakeFiles/esempio_randfiller.dir/esempio_randfiller.cpp.o -o esempio_randfiller
