@@ -1,6 +1,6 @@
 #pragma once
+
 #include <iostream>
-#include <optional>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -8,7 +8,7 @@
 //vec.size() --> auto, ma, su consiglio del docente uso int, l'importante è che sia non negativo -->  unsigned
 template <typename T> 
 bool is_sorted(const std::vector<T>& vec){
-    int N = vec.size()
+    int N = vec.size();
     if (N == 0){
         return true;
     }
