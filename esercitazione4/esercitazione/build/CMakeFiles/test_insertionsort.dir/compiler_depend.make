@@ -263,6 +263,44 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
   /usr/lib/linux/uapi/arm64/asm/posix_types.h \
   /usr/lib/linux/uapi/arm64/asm/types.h
 
+test_insertionsort: /lib/aarch64-linux-gnu/libc.so.6 \
+  /lib/aarch64-linux-gnu/libm.so.6 \
+  /lib/aarch64-linux-gnu/libmvec.so.1 \
+  /lib/ld-linux-aarch64.so.1 \
+  /usr/lib/aarch64-linux-gnu/libc_nonshared.a \
+  /usr/lib/aarch64-linux-gnu/Scrt1.o \
+  /usr/lib/aarch64-linux-gnu/crti.o \
+  /usr/lib/aarch64-linux-gnu/crtn.o \
+  /usr/lib/aarch64-linux-gnu/libc.so \
+  /usr/lib/aarch64-linux-gnu/libgcc_s.so.1 \
+  /usr/lib/aarch64-linux-gnu/libm.so \
+  /usr/lib/gcc/aarch64-linux-gnu/14/crtbeginS.o \
+  /usr/lib/gcc/aarch64-linux-gnu/14/crtendS.o \
+  /usr/lib/gcc/aarch64-linux-gnu/14/libgcc.a \
+  /usr/lib/gcc/aarch64-linux-gnu/14/libgcc_s.so \
+  /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so \
+  CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o
+
+
+CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o:
+
+/usr/lib/gcc/aarch64-linux-gnu/14/libgcc.a:
+
+/usr/lib/aarch64-linux-gnu/libm.so:
+
+/usr/lib/aarch64-linux-gnu/libgcc_s.so.1:
+
+/usr/lib/aarch64-linux-gnu/libc.so:
+
+/usr/lib/aarch64-linux-gnu/crtn.o:
+
+/usr/lib/aarch64-linux-gnu/crti.o:
+
+/usr/lib/aarch64-linux-gnu/Scrt1.o:
+
+/lib/aarch64-linux-gnu/libmvec.so.1:
+
+/lib/aarch64-linux-gnu/libm.so.6:
 
 /usr/include/c++/14/bits/locale_classes.tcc:
 
@@ -287,6 +325,8 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
 /usr/include/aarch64-linux-gnu/c++/14/bits/ctype_inline.h:
 
 /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
+
+/lib/aarch64-linux-gnu/libc.so.6:
 
 /usr/include/c++/14/bits/iterator_concepts.h:
 
@@ -361,6 +401,8 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
 
 /usr/include/aarch64-linux-gnu/sys/cdefs.h:
+
+/usr/lib/gcc/aarch64-linux-gnu/14/crtendS.o:
 
 /usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
 
@@ -614,6 +656,8 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
 
 /usr/include/c++/14/bits/ranges_base.h:
 
+/usr/lib/gcc/aarch64-linux-gnu/14/libgcc_s.so:
+
 /usr/include/c++/14/bits/streambuf_iterator.h:
 
 /usr/include/c++/14/bits/ranges_cmp.h:
@@ -710,6 +754,8 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
 
 /usr/include/c++/14/cwctype:
 
+/usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so:
+
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/c++/14/debug/assertions.h:
@@ -766,7 +812,11 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
 
 /usr/include/linux/sched/types.h:
 
+/usr/lib/gcc/aarch64-linux-gnu/14/crtbeginS.o:
+
 /usr/include/linux/types.h:
+
+/lib/ld-linux-aarch64.so.1:
 
 /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
 
@@ -775,6 +825,8 @@ CMakeFiles/test_insertionsort.dir/test_insertionsort.cpp.o: /home/pcsdocker/Data
 /usr/include/aarch64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/locale.h:
+
+/usr/lib/aarch64-linux-gnu/libc_nonshared.a:
 
 /usr/include/math.h:
 
