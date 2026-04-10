@@ -6,13 +6,13 @@
 int main(){
     //Riempimento di vettori con numeri casuali --> uso interi (+, -)
     randfiller rf(42); //fisso un seme
-    std::vector<int> vec;
+    std::vector<double> vec;
     std::vector<int> dim; //credo vettore delle dimensioni con randfiller
     dim.resize(100);
     rf.fill(dim, 0, 5000); //riempio il vettore delle dimensioni casuali
     for (int t = 0; t <100; t++){
         vec.resize(dim[t]);
-        rf.fill(vec, -10000, 10000);
+        rf.fill(vec, -10000.0, 10000.0);
         insertion_sort(vec);
         if (! is_sorted(vec)){
             std::cerr << "ERRORE: vettore di dimensione "<< dim[t] << " non è ordinato\n";

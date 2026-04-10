@@ -20,32 +20,32 @@ int main(){
     std::vector<double> y_sort;
 
     int n = dim.size();
-    std::vector <int> vec; //creo il vettore che volta per volta utilizzerò
+    std::vector <double> vec; //creo il vettore che volta per volta utilizzerò
     for (int i=0; i < n; i++){
         //creo il vettore di lunghezza dim[i] sul quale verificherò le lunghezze
         vec.resize(dim[i]);
-        rf.fill(vec, -10000, 10000);
+        rf.fill(vec, -10000.0, 10000.0);
         timecounter tc;
         //bubble sort
-        std::vector<int> v1 = vec; //creo una copia di vec da riordinare
+        std::vector<double> v1 = vec; //creo una copia di vec da riordinare
         tc.tic();
         bubble_sort(v1);
         double t_bubble = tc.toc();
         y_bubble.push_back(t_bubble);
         //insertion sort
-        std::vector<int> v2 = vec;
+        std::vector<double> v2 = vec;
         tc.tic();
         insertion_sort(v2);
         double t_inser = tc.toc();
         y_inser.push_back(t_inser);
         //selection sort
-        std::vector<int> v3 = vec;
+        std::vector<double> v3 = vec;
         tc.tic();
         selection_sort(v3);
         double t_select = tc.toc();
         y_select.push_back(t_select);
         //std::sort
-        std::vector<int> v4 = vec;
+        std::vector<double> v4 = vec;
         tc.tic();
         std::sort(v4.begin(), v4.end());
         double t_sort = tc.toc();
