@@ -14,3 +14,5 @@ add_test([=[quicksort]=] "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_re
 set_tests_properties([=[quicksort]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/CMakeLists.txt;17;add_test;/home/pcsdocker/Data/ES_PCS_26/esercitazione5/CMakeLists.txt;0;")
 add_test([=[selectionsort]=] "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_selectionsort")
 set_tests_properties([=[selectionsort]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/CMakeLists.txt;19;add_test;/home/pcsdocker/Data/ES_PCS_26/esercitazione5/CMakeLists.txt;0;")
+add_test([=[quicksorthybrid]=] "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_quicksorthybrid")
+set_tests_properties([=[quicksorthybrid]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/CMakeLists.txt;21;add_test;/home/pcsdocker/Data/ES_PCS_26/esercitazione5/CMakeLists.txt;0;")

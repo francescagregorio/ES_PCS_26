@@ -60,4 +60,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_selectionsort.dir/DependInfo.cmake"
   "CMakeFiles/test_mergesort.dir/DependInfo.cmake"
   "CMakeFiles/test_quicksort.dir/DependInfo.cmake"
+  "CMakeFiles/test_quicksorthybrid.dir/DependInfo.cmake"
   )

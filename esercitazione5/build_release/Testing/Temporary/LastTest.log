@@ -1,26 +1,26 @@
-Start testing: Apr 22 19:35 UTC
+Start testing: Apr 29 07:43 UTC
 ----------------------------------------------------------
-1/5 Testing: bubblesort
-1/5 Test: bubblesort
+1/6 Testing: bubblesort
+1/6 Test: bubblesort
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_bubblesort"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release
-"bubblesort" start time: Apr 22 19:35 UTC
+"bubblesort" start time: Apr 29 07:43 UTC
 Output:
 ----------------------------------------------------------
 Test superati con SUCCESSO
 <end of output>
-Test time =   0.37 sec
+Test time =   0.36 sec
 ----------------------------------------------------------
 Test Passed.
-"bubblesort" end time: Apr 22 19:35 UTC
+"bubblesort" end time: Apr 29 07:43 UTC
 "bubblesort" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/5 Testing: insertionsort
-2/5 Test: insertionsort
+2/6 Testing: insertionsort
+2/6 Test: insertionsort
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_insertionsort"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release
-"insertionsort" start time: Apr 22 19:35 UTC
+"insertionsort" start time: Apr 29 07:43 UTC
 Output:
 ----------------------------------------------------------
 Test superati con SUCCESSO
@@ -28,15 +28,15 @@ Test superati con SUCCESSO
 Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"insertionsort" end time: Apr 22 19:35 UTC
+"insertionsort" end time: Apr 29 07:43 UTC
 "insertionsort" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/5 Testing: mergesort
-3/5 Test: mergesort
+3/6 Testing: mergesort
+3/6 Test: mergesort
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_mergesort"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release
-"mergesort" start time: Apr 22 19:35 UTC
+"mergesort" start time: Apr 29 07:43 UTC
 Output:
 ----------------------------------------------------------
 Test superati con SUCCESSO
@@ -44,15 +44,15 @@ Test superati con SUCCESSO
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"mergesort" end time: Apr 22 19:35 UTC
+"mergesort" end time: Apr 29 07:43 UTC
 "mergesort" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/5 Testing: quicksort
-4/5 Test: quicksort
+4/6 Testing: quicksort
+4/6 Test: quicksort
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_quicksort"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release
-"quicksort" start time: Apr 22 19:35 UTC
+"quicksort" start time: Apr 29 07:43 UTC
 Output:
 ----------------------------------------------------------
 Test superati con SUCCESSO
@@ -60,24 +60,40 @@ Test superati con SUCCESSO
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"quicksort" end time: Apr 22 19:35 UTC
+"quicksort" end time: Apr 29 07:43 UTC
 "quicksort" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/5 Testing: selectionsort
-5/5 Test: selectionsort
+5/6 Testing: selectionsort
+5/6 Test: selectionsort
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_selectionsort"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release
-"selectionsort" start time: Apr 22 19:35 UTC
+"selectionsort" start time: Apr 29 07:43 UTC
 Output:
 ----------------------------------------------------------
 Test superati con SUCCESSO
 <end of output>
-Test time =   0.16 sec
+Test time =   0.17 sec
 ----------------------------------------------------------
 Test Passed.
-"selectionsort" end time: Apr 22 19:35 UTC
+"selectionsort" end time: Apr 29 07:43 UTC
 "selectionsort" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 22 19:35 UTC
+6/6 Testing: quicksorthybrid
+6/6 Test: quicksorthybrid
+Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release/test_quicksorthybrid"
+Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione5/build_release
+"quicksorthybrid" start time: Apr 29 07:43 UTC
+Output:
+----------------------------------------------------------
+Test superati con SUCCESSO
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"quicksorthybrid" end time: Apr 29 07:43 UTC
+"quicksorthybrid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 29 07:43 UTC

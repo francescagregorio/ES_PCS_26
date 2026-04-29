@@ -204,6 +204,19 @@ test_quicksort/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_quicksort.dir/build.make CMakeFiles/test_quicksort.dir/build
 .PHONY : test_quicksort/fast
 
+#=============================================================================
+# Target rules for targets named test_quicksorthybrid
+
+# Build rule for target.
+test_quicksorthybrid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_quicksorthybrid
+.PHONY : test_quicksorthybrid
+
+# fast build rule for target.
+test_quicksorthybrid/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_quicksorthybrid.dir/build.make CMakeFiles/test_quicksorthybrid.dir/build
+.PHONY : test_quicksorthybrid/fast
+
 measure_sorts.o: measure_sorts.cpp.o
 .PHONY : measure_sorts.o
 
@@ -324,6 +337,30 @@ test_quicksort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_quicksort.dir/build.make CMakeFiles/test_quicksort.dir/test_quicksort.cpp.s
 .PHONY : test_quicksort.cpp.s
 
+test_quicksorthybrid.o: test_quicksorthybrid.cpp.o
+.PHONY : test_quicksorthybrid.o
+
+# target to build an object file
+test_quicksorthybrid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_quicksorthybrid.dir/build.make CMakeFiles/test_quicksorthybrid.dir/test_quicksorthybrid.cpp.o
+.PHONY : test_quicksorthybrid.cpp.o
+
+test_quicksorthybrid.i: test_quicksorthybrid.cpp.i
+.PHONY : test_quicksorthybrid.i
+
+# target to preprocess a source file
+test_quicksorthybrid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_quicksorthybrid.dir/build.make CMakeFiles/test_quicksorthybrid.dir/test_quicksorthybrid.cpp.i
+.PHONY : test_quicksorthybrid.cpp.i
+
+test_quicksorthybrid.s: test_quicksorthybrid.cpp.s
+.PHONY : test_quicksorthybrid.s
+
+# target to generate assembly for a file
+test_quicksorthybrid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_quicksorthybrid.dir/build.make CMakeFiles/test_quicksorthybrid.dir/test_quicksorthybrid.cpp.s
+.PHONY : test_quicksorthybrid.cpp.s
+
 test_selectionsort.o: test_selectionsort.cpp.o
 .PHONY : test_selectionsort.o
 
@@ -386,6 +423,7 @@ help:
 	@echo "... test_insertionsort"
 	@echo "... test_mergesort"
 	@echo "... test_quicksort"
+	@echo "... test_quicksorthybrid"
 	@echo "... test_selectionsort"
 	@echo "... measure_sorts.o"
 	@echo "... measure_sorts.i"
@@ -402,6 +440,9 @@ help:
 	@echo "... test_quicksort.o"
 	@echo "... test_quicksort.i"
 	@echo "... test_quicksort.s"
+	@echo "... test_quicksorthybrid.o"
+	@echo "... test_quicksorthybrid.i"
+	@echo "... test_quicksorthybrid.s"
 	@echo "... test_selectionsort.o"
 	@echo "... test_selectionsort.i"
 	@echo "... test_selectionsort.s"
