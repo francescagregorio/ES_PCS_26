@@ -22,7 +22,13 @@ int main(){
             return EXIT_FAILURE;
         }
     }
-    
+    //check vettore nullo
+    std::vector<int> vec0(0);
+    merge_sort(vec0, 0, (int)vec0.size()-1);
+    if (! is_sorted(vec0)){
+            std::cerr << "ERRORE: vettore di dimensione 0 non è ordinato\n";
+            return EXIT_FAILURE;
+    }   
     /*faccio dei test con delle stringhe, ma non generate con randfiller.h
     in quanto esso lavora sugli integrals*/
     std::vector<std::string> mesi= {"gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"};

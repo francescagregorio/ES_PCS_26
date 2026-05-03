@@ -168,28 +168,9 @@ int main(){
         std::cout << y_quick_hybrid[j] << "; ";
     }
     std::cout << y_quick_hybrid[n-1] << "];\n";
-    /*Cerco la soglia al di sotto della quale gli algoritmi quadratici
-    battono quelli logaritmici*/
-    //devono essere battuti per almeno 2 dimensioni
-    /*std::cout << "\nRicerca della soglia n0 al di sotto della quale gli algoritmi quadratici sono più veloci dei logaritmici\n";
-    bool found = false;
-    for (int i = 0; i <n; i++){
-        double best_quad = std::min({y_bubble[i], y_inser[i], y_select[i]});
-        double best_log = std::min({y_merge[i], y_quick[i]});
-        if (best_log < best_quad){
-            std::cout << "n0 = " <<dim[i]<<"\n";
-            found = true;
-            break;
-        }
-    }
-    if (! found){
-        std::cout <<"n0 non trovato nel range testato\n";
-    }*/
-    /*A causa del rumore, n0 varia ogni volta che lancio il programma;
-    un grafico realizzato con Matlab può facilitare la comprensione*/
-    /*Dopo aver modificato quick sort e averne testato la versione "ibrida",
+        /*Dopo aver modificato quick sort e averne testato la versione "ibrida",
     provo a prenderne i tempi, inserendo il quick_sort_hybrid nel ciclo for che 
-    si apre alla linea di codice 35*/
+    si apre alla linea di codice 38*/
     
 
     return 0;
