@@ -1,0 +1,14 @@
+ordine_canonico 1 0.00200046
+from_to 1 0.001592
+e_uguaglianza 1 0.001567
+e_disuguaglianza 1 0.001257
+e_minore 1 0.00118817
+g_costr 1 0.00122575
+g_neigh 1 0.00119104
+g_add_edge 1 0.00137387
+g_all_edges 1 0.00119921
+g_all_nodes 1 0.00113413
+g_number 1 0.00103133
+g_at 1 0.00102317
+g_differenza 1 0.000927625
+---
