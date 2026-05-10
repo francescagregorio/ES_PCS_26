@@ -127,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named test_ordine_canonico
 
 # Build rule for target.
@@ -294,6 +307,30 @@ test_g_differenza: cmake_check_build_system
 test_g_differenza/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_g_differenza.dir/build.make CMakeFiles/test_g_differenza.dir/build
 .PHONY : test_g_differenza/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 test_edge_disuguaglianza.o: test_edge_disuguaglianza.cpp.o
 .PHONY : test_edge_disuguaglianza.o
@@ -616,6 +653,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... main"
 	@echo "... test_e_disuguaglianza"
 	@echo "... test_e_minore"
 	@echo "... test_e_uguaglianza"
@@ -629,6 +667,9 @@ help:
 	@echo "... test_g_neigh"
 	@echo "... test_g_number"
 	@echo "... test_ordine_canonico"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... test_edge_disuguaglianza.o"
 	@echo "... test_edge_disuguaglianza.i"
 	@echo "... test_edge_disuguaglianza.s"

@@ -28,7 +28,7 @@ class undirected_graph{
             return *this; //vado a restituire l'oggetto stesso
         }
         //all_edges()
-        std::set<undirected_edge<T>> all_edges() const{
+        std::set<undirected_edge<T>> all_edges() const {
             std::set<undirected_edge<T>> edges;
             for (const auto& [nodo, vic]: m_adj){
                 for (const T& nb: vic){
@@ -40,7 +40,7 @@ class undirected_graph{
             return edges;
         }
         //all_nodes
-        std::set<T> all_nodes() const{
+        std::set<T> all_nodes() const {
             std::set<T> nodi;
             for (const auto& [nodo, vic] : m_adj){
                 nodi.insert(nodo);
@@ -66,7 +66,7 @@ class undirected_graph{
             return;
         }
         //edge_number()
-        int edge_number(const undirected_edge<T>& e) const{
+        int edge_number(const undirected_edge<T>& e) const {
             int idx = 0;
             for (const auto& edge : all_edges()){
                 if (edge == e){

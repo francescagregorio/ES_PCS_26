@@ -18,6 +18,11 @@ class undirected_edge{
         T to() const{
             return m_to;
         }
+        
+        //per evitare ambiguità uso friend
+        friend std::ostream& operator<<(std::ostream& os, const undirected_edge<T>& e){
+            return os << "(" << e.from() << "; " << e.to()<<")";
+        }
         //ordinamento lessicografico
         bool operator< (const undirected_edge<T>& e) const{
             if (*this!= e){
@@ -35,7 +40,4 @@ class undirected_edge{
             return !(*this == e);
         }
 };
-template <typename T>
-std::ostream& operator<<(std::ostream& os, const undirected_edge<T>& e){
-    return os << "(" << e.from() << "; " << e.to()<<")";
-}
+

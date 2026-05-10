@@ -16,7 +16,7 @@ class undirected_graph{
     /*definisco degli operatori privati che torneranno utili in seguito*/
     /*definisco un comparatore che confronta una riga con un valore.
     Tornerò utile per std::lower_bound*/
-    //static --> persiste per tutta la durata del programma
+    
     static bool comparator(const std::vector<T>& riga, const T& val){
         return riga[0]<val;
     }
@@ -80,7 +80,7 @@ class undirected_graph{
             }
         }
         //neighbours
-        std::optional<std::vector<T>> neighbours(const T& nodo) const{
+        std::optional<std::vector<T>> neighbours(const T& nodo) const {
             std::size_t idx = row_of(nodo);
             if (idx >= m_adj.size()){
                 return std::nullopt;
@@ -111,7 +111,7 @@ class undirected_graph{
             return edges;
         }
         //all_nodes
-        std::vector<T> all_nodes() const{
+        std::vector<T> all_nodes() const {
             //devo prendere il primo vettore di ogni riga
             std::vector<T> nodi;
             for (const auto& riga: m_adj){
@@ -134,7 +134,7 @@ class undirected_graph{
         }
         //edge_at 
         //optional
-        std::optional<undirected_edge<T>> edge_at(std::size_t idx) const{
+        std::optional<undirected_edge<T>> edge_at(std::size_t idx) const {
             auto edges = all_edges();
             //se out_of_range
             if (idx>= edges.size()){
@@ -143,7 +143,7 @@ class undirected_graph{
             return edges[idx];
         }
         //differenza
-        undirected_graph<T> operator-(const undirected_graph<T>& g) const{
+        undirected_graph<T> operator-(const undirected_graph<T>& g) const {
             undirected_graph<T> r;
             auto my_e = all_edges();
             auto g_e = g.all_edges();

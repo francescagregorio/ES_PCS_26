@@ -230,3 +230,22 @@ CMakeFiles/test_g_differenza.dir/test_graph_differenza.cpp.o
  /usr/lib/linux/uapi/arm64/asm/posix_types.h
  /usr/lib/linux/uapi/arm64/asm/types.h
 
+test_g_differenza
+ /lib/aarch64-linux-gnu/libc.so.6
+ /lib/aarch64-linux-gnu/libm.so.6
+ /lib/aarch64-linux-gnu/libmvec.so.1
+ /lib/ld-linux-aarch64.so.1
+ /usr/lib/aarch64-linux-gnu/libc_nonshared.a
+ /usr/lib/aarch64-linux-gnu/Scrt1.o
+ /usr/lib/aarch64-linux-gnu/crti.o
+ /usr/lib/aarch64-linux-gnu/crtn.o
+ /usr/lib/aarch64-linux-gnu/libc.so
+ /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
+ /usr/lib/aarch64-linux-gnu/libm.so
+ /usr/lib/gcc/aarch64-linux-gnu/14/crtbeginS.o
+ /usr/lib/gcc/aarch64-linux-gnu/14/crtendS.o
+ /usr/lib/gcc/aarch64-linux-gnu/14/libgcc.a
+ /usr/lib/gcc/aarch64-linux-gnu/14/libgcc_s.so
+ /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so
+ /home/pcsdocker/Data/ES_PCS_26/esercitazione6/build/CMakeFiles/test_g_differenza.dir/test_graph_differenza.cpp.o
+

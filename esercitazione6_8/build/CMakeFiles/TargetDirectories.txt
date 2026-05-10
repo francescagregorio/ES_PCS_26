@@ -1,3 +1,4 @@
+/home/pcsdocker/Data/ES_PCS_26/esercitazione6/build/CMakeFiles/main.dir
 /home/pcsdocker/Data/ES_PCS_26/esercitazione6/build/CMakeFiles/test_ordine_canonico.dir
 /home/pcsdocker/Data/ES_PCS_26/esercitazione6/build/CMakeFiles/test_from_to.dir
 /home/pcsdocker/Data/ES_PCS_26/esercitazione6/build/CMakeFiles/test_e_uguaglianza.dir

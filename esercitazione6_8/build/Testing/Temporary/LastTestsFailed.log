@@ -1,0 +1,13 @@
+1:ordine_canonico
+2:from_to
+3:e_uguaglianza
+4:e_disuguaglianza
+5:e_minore
+6:g_costr
+7:g_neigh
+8:g_add_edge
+9:g_all_edges
+10:g_all_nodes
+11:g_number
+12:g_at
+13:g_differenza

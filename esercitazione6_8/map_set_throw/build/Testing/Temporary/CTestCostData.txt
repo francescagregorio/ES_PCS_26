@@ -1,14 +1,14 @@
-ordine_canonico 1 0.00173217
-from_to 1 0.00137596
-e_uguaglianza 1 0.00146375
-e_disuguaglianza 1 0.00221367
-e_minore 1 0.00146388
-g_costr 1 0.0014575
-g_neigh 1 0.00185396
-g_add_edge 1 0.00125221
-g_all_edges 1 0.00114446
-g_all_nodes 1 0.00126246
-g_number 1 0.0011395
-g_at 1 0.00122008
-g_differenza 1 0.00117058
+ordine_canonico 5 0.000403358
+from_to 5 0.000277525
+e_uguaglianza 5 0.000268283
+e_disuguaglianza 5 0.000253275
+e_minore 5 0.000289017
+g_costr 5 0.000238692
+g_neigh 5 0.000304358
+g_add_edge 5 0.000218675
+g_all_edges 5 0.000261083
+g_all_nodes 5 0.000301192
+g_number 5 0.00022495
+g_at 5 0.000261475
+g_differenza 5 0.000190667
 ---
