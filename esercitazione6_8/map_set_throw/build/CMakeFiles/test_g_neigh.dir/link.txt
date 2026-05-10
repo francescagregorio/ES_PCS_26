@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wshadow -Werror=vla -Wl,--dependency-file=CMakeFiles/test_g_neigh.dir/link.d CMakeFiles/test_g_neigh.dir/test_graph_neighbours.cpp.o -o test_g_neigh
