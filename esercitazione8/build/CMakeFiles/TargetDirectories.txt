@@ -1,0 +1,17 @@
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/main.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_ordine_canonico.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_from_to.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_e_uguaglianza.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_e_disuguaglianza.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_e_minore.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_costr.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_neigh.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_add_edge.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_all_edges.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_all_nodes.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_number.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_at.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test_g_differenza.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/test.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/edit_cache.dir
+/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/CMakeFiles/rebuild_cache.dir
