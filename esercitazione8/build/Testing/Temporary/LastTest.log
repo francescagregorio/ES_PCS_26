@@ -1,17 +1,17 @@
-Start testing: May 11 07:34 UTC
+Start testing: May 12 08:04 UTC
 ----------------------------------------------------------
 1/13 Testing: ordine_canonico
 1/13 Test: ordine_canonico
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_ordine_canonico"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"ordine_canonico" start time: May 11 07:34 UTC
+"ordine_canonico" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ordine_canonico" end time: May 11 07:34 UTC
+"ordine_canonico" end time: May 12 08:04 UTC
 "ordine_canonico" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/13 Test: from_to
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_from_to"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"from_to" start time: May 11 07:34 UTC
+"from_to" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"from_to" end time: May 11 07:34 UTC
+"from_to" end time: May 12 08:04 UTC
 "from_to" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 3/13 Test: e_uguaglianza
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_e_uguaglianza"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"e_uguaglianza" start time: May 11 07:34 UTC
+"e_uguaglianza" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"e_uguaglianza" end time: May 11 07:34 UTC
+"e_uguaglianza" end time: May 12 08:04 UTC
 "e_uguaglianza" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 4/13 Test: e_disuguaglianza
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_e_disuguaglianza"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"e_disuguaglianza" start time: May 11 07:34 UTC
+"e_disuguaglianza" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"e_disuguaglianza" end time: May 11 07:34 UTC
+"e_disuguaglianza" end time: May 12 08:04 UTC
 "e_disuguaglianza" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,14 +64,14 @@ Test Passed.
 5/13 Test: e_minore
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_e_minore"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"e_minore" start time: May 11 07:34 UTC
+"e_minore" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"e_minore" end time: May 11 07:34 UTC
+"e_minore" end time: May 12 08:04 UTC
 "e_minore" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -79,14 +79,14 @@ Test Passed.
 6/13 Test: g_costr
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_costr"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_costr" start time: May 11 07:34 UTC
+"g_costr" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_costr" end time: May 11 07:34 UTC
+"g_costr" end time: May 12 08:04 UTC
 "g_costr" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,7 +94,7 @@ Test Passed.
 7/13 Test: g_neigh
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_neigh"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_neigh" start time: May 11 07:34 UTC
+"g_neigh" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 Successo: neighbours(5) correttamente gestito come nullopt
@@ -102,7 +102,7 @@ Successo: neighbours(5) correttamente gestito come nullopt
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_neigh" end time: May 11 07:34 UTC
+"g_neigh" end time: May 12 08:04 UTC
 "g_neigh" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -110,14 +110,14 @@ Test Passed.
 8/13 Test: g_add_edge
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_add_edge"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_add_edge" start time: May 11 07:34 UTC
+"g_add_edge" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_add_edge" end time: May 11 07:34 UTC
+"g_add_edge" end time: May 12 08:04 UTC
 "g_add_edge" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -125,14 +125,14 @@ Test Passed.
 9/13 Test: g_all_edges
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_all_edges"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_all_edges" start time: May 11 07:34 UTC
+"g_all_edges" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_all_edges" end time: May 11 07:34 UTC
+"g_all_edges" end time: May 12 08:04 UTC
 "g_all_edges" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -140,14 +140,14 @@ Test Passed.
 10/13 Test: g_all_nodes
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_all_nodes"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_all_nodes" start time: May 11 07:34 UTC
+"g_all_nodes" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_all_nodes" end time: May 11 07:34 UTC
+"g_all_nodes" end time: May 12 08:04 UTC
 "g_all_nodes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -155,7 +155,7 @@ Test Passed.
 11/13 Test: g_number
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_number"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_number" start time: May 11 07:34 UTC
+"g_number" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 Tentativo di accesso all'arco (8; 9) non presente
@@ -164,7 +164,7 @@ Successo: l'arco (8; 9) correttamente non trovato (nullopt)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_number" end time: May 11 07:34 UTC
+"g_number" end time: May 12 08:04 UTC
 "g_number" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -172,7 +172,7 @@ Test Passed.
 12/13 Test: g_at
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_at"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_at" start time: May 11 07:34 UTC
+"g_at" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 Successo: indice out_of_range gestito correttamente come nullopt
@@ -180,7 +180,7 @@ Successo: indice out_of_range gestito correttamente come nullopt
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_at" end time: May 11 07:34 UTC
+"g_at" end time: May 12 08:04 UTC
 "g_at" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -188,15 +188,15 @@ Test Passed.
 13/13 Test: g_differenza
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione8/build/test_g_differenza"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione8/build
-"g_differenza" start time: May 11 07:34 UTC
+"g_differenza" start time: May 12 08:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"g_differenza" end time: May 11 07:34 UTC
+"g_differenza" end time: May 12 08:04 UTC
 "g_differenza" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 11 07:34 UTC
+End testing: May 12 08:04 UTC
