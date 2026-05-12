@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wshadow -Werror=vla -Wl,--dependency-file=CMakeFiles/test_e_disuguaglianza.dir/link.d CMakeFiles/test_e_disuguaglianza.dir/test_edge_disuguaglianza.cpp.o -o test_e_disuguaglianza
