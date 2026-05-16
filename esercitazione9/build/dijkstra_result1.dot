@@ -6,6 +6,7 @@ graph G {
  Thursday ;
  Tuesday ;
  Wednesday ;
+ Friday -- Friday ;
  Friday -- Sunday ;
  Friday -- Thursday ;
  Friday -- Tuesday ;
