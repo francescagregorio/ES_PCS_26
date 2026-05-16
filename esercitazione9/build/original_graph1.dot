@@ -1,0 +1,17 @@
+graph G {
+ label = Grafo_Originale;
+ Friday ;
+ Monday ;
+ Sunday ;
+ Thursday ;
+ Tuesday ;
+ Wednesday ;
+ Friday -- Sunday ;
+ Friday -- Thursday ;
+ Friday -- Tuesday ;
+ Friday -- Wednesday ;
+ Monday -- Thursday ;
+ Monday -- Tuesday ;
+ Thursday -- Tuesday ;
+ Tuesday -- Wednesday ;
+}

@@ -1,0 +1,14 @@
+graph G {
+ label = Albero_cammini_minimi_Dijkstra;
+ Friday ;
+ Monday ;
+ Sunday ;
+ Thursday ;
+ Tuesday ;
+ Wednesday ;
+ Friday -- Sunday ;
+ Friday -- Thursday ;
+ Friday -- Tuesday ;
+ Friday -- Wednesday ;
+ Monday -- Tuesday ;
+}

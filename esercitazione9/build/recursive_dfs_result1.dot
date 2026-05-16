@@ -1,0 +1,14 @@
+graph G {
+ label = Visita_DFS_ricorsiva;
+ Friday ;
+ Monday ;
+ Sunday ;
+ Thursday ;
+ Tuesday ;
+ Wednesday ;
+ Friday -- Sunday ;
+ Friday -- Thursday ;
+ Monday -- Thursday ;
+ Monday -- Tuesday ;
+ Tuesday -- Wednesday ;
+}

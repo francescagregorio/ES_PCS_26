@@ -1,0 +1,14 @@
+graph G {
+ label = Visita_BFS;
+ Friday ;
+ Monday ;
+ Sunday ;
+ Thursday ;
+ Tuesday ;
+ Wednesday ;
+ Friday -- Sunday ;
+ Friday -- Thursday ;
+ Friday -- Tuesday ;
+ Friday -- Wednesday ;
+ Monday -- Thursday ;
+}
