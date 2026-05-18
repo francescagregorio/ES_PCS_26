@@ -83,10 +83,6 @@ int main() {
     /*Effettua DFS ricorsiva dal nodo 1*/
     auto rdfsG = recursive_dfs(G, 1);
     write_dot("recursive_dfs_result.dot", rdfsG, "Visita_DFS_ricorsiva");
-    /*Effettua DFS ricorsiva dal nodo 1 usando l'algoritmo che dovrebbe produrre lo stesso
-    risultato della versione iterativa*/
-    auto rdfsiG = recursive_dfs_2(G, 1);
-    write_dot("recursive_dfs_i_result.dot", rdfsiG, "Visita_DFS_ricorsiva_alg2");
     /*Dijstra*/
     auto dijG = dijkstra(G,1);
     write_dot("dijkstra_result.dot", dijG, "Albero_cammini_minimi_Dijkstra");
@@ -111,10 +107,6 @@ int main() {
     /*Effettua DFS ricorsiva dal nodo "Friday"*/
     auto rdfsG1 = recursive_dfs(G1, std::string("Friday"));
     write_dot("recursive_dfs_result1.dot", rdfsG1, "Visita_DFS_ricorsiva");
-    /*Effettua DFS ricorsiva dal nodo "Friday" usando l'algoritmo che dovrebbe produrre lo stesso
-    risultato della versione iterativa*/
-    auto rdfsiG1 = recursive_dfs_2(G1, std::string("Friday"));
-    write_dot("recursive_dfs_i_result1.dot", rdfsiG1, "Visita_DFS_ricorsiva_alg2");
     /*Dijstra*/
     auto dijG1 = dijkstra(G1,std::string("Friday"));
     write_dot("dijkstra_result1.dot", dijG1, "Albero_cammini_minimi_Dijkstra");
@@ -136,10 +128,6 @@ int main() {
     /*Effettua DFS ricorsiva dal nodo 2.2*/
     auto rdfsG2 = recursive_dfs(G2, 2.2);
     write_dot("recursive_dfs_result2.dot", rdfsG2, "Visita_DFS_ricorsiva");
-    /*Effettua DFS ricorsiva dal nodo 2.2 usando l'algoritmo che dovrebbe produrre lo stesso
-    risultato della versione iterativa*/
-    auto rdfsiG2 = recursive_dfs_2(G2, 2.2);
-    write_dot("recursive_dfs_i_result2.dot", rdfsiG2, "Visita_DFS_ricorsiva_alg2");
     /*Dijstra*/
     auto dijG2 = dijkstra(G2,2.2);
     write_dot("dijkstra_result2.dot", dijG2, "Albero_cammini_minimi_Dijkstra");
