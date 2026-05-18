@@ -66,7 +66,7 @@ void dfs_recursive_step(const undirected_graph<T>& g, const T& u, std::map<T, bo
         for (const T& v: *vicini_opt){
             if(!reached[v]){
                 //aggiungo all'albero
-                tree.add_edge(v,u);
+                tree.add_edge(u,v);
                 //voglio scendere in profondità --> chiamata ricorsiva
                 dfs_recursive_step(g, v, reached, tree); 
                 
@@ -90,7 +90,7 @@ undirected_graph<T> recursive_dfs(const undirected_graph<T>& g, const T& v){
     }
     return tree;
 }
-
+/*
 //versione che ottiene lo stesso grafo di dfs iterativa
 template <typename T>
 void dfs_recursive_step_2(const undirected_graph<T>& g, const T& u, std::map<T, bool>& reached, undirected_graph<T>& tree){
@@ -129,7 +129,7 @@ undirected_graph<T> recursive_dfs_2(const undirected_graph<T>& g, const T& v){
     }
     return tree;
 }
-
+*/
 
 /*per poter realizzare i grafi con GraphViz, mi serve un file .dot*/
 template <typename T>
