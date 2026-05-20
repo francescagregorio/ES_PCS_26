@@ -1,0 +1,2 @@
+gradiente_coniugato 4 0.000607083
+---
