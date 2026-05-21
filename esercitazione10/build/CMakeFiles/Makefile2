@@ -64,11 +64,13 @@ CMAKE_BINARY_DIR = /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build
 
 # The main recursive "all" target.
 all: CMakeFiles/main.dir/all
+all: CMakeFiles/test_soluz_corr.dir/all
 all: CMakeFiles/test_grad_coniug.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/main.dir/codegen
+codegen: CMakeFiles/test_soluz_corr.dir/codegen
 codegen: CMakeFiles/test_grad_coniug.dir/codegen
 .PHONY : codegen
 
@@ -78,6 +80,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/test_soluz_corr.dir/clean
 clean: CMakeFiles/test_grad_coniug.dir/clean
 .PHONY : clean
 
@@ -112,6 +115,38 @@ CMakeFiles/main.dir/codegen:
 CMakeFiles/main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
 .PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_soluz_corr.dir
+
+# All Build rule for target.
+CMakeFiles/test_soluz_corr.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/CMakeFiles --progress-num=5,6 "Built target test_soluz_corr"
+.PHONY : CMakeFiles/test_soluz_corr.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_soluz_corr.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_soluz_corr.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_soluz_corr.dir/rule
+
+# Convenience name for target.
+test_soluz_corr: CMakeFiles/test_soluz_corr.dir/rule
+.PHONY : test_soluz_corr
+
+# codegen rule for target.
+CMakeFiles/test_soluz_corr.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/CMakeFiles --progress-num=5,6 "Finished codegen for target test_soluz_corr"
+.PHONY : CMakeFiles/test_soluz_corr.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_soluz_corr.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/clean
+.PHONY : CMakeFiles/test_soluz_corr.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/test_grad_coniug.dir

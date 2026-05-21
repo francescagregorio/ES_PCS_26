@@ -1,14 +1,7 @@
 #include "gradiente_coniugato.hpp"
 #include <iostream>
 #include "Eigen/Eigen"
-/*Sia Ax = b un sistema lineare; un vettore y (di dimensioni coerenti) è
-soluzione di questo sistema se Ay - b = 0; lavorando in c++, devo
-considerare una tolleranza, però*/
-bool soluzione_corretta(const Eigen::MatrixXd&A, Eigen::VectorXd& b, const Eigen::VectorXd& x){
-    const double tol = 1.0e-12;
-    return (A*x - b).norm() < tol;
-}
-
+#include "soluzione_corretta.hpp"
 int main(){
     //sistema 2x2
     Eigen::MatrixXd A(2,2);
@@ -19,11 +12,14 @@ int main(){
     a << 6,7;
     std::cout << "a = " << a<< "\n";
     auto x_a = gradiente_coniugato(A,a);
+    Eigen::VectorXd x_a_ex(2);
+    x_a_ex << 1,2;
+    std::cout << "Soluzione: "<< x_a_ex <<"\n";
     if (!x_a.has_value()){
         std::cerr << "ERRORE: il sistema Ax = a ha restuituito nullopt!\n";
         return EXIT_FAILURE;
     }
-    if (!soluzione_corretta(A,a, x_a.value())){
+    if (!soluzione_corretta(x_a.value(), x_a_ex)){
         std::cerr <<"ERRORE: il metodo del gradiente coniugato ha restituito la soluzione errata!\n";
         return EXIT_FAILURE;
     }
@@ -35,14 +31,17 @@ int main(){
         0, 1, 4;
     std::cout << "B = " << B <<"\n";
     Eigen::VectorXd b(3);
-    b << 8, 12, 13;
+    b << 6, 12, 14;
     std::cout << "b = " << b << "\n";
+    Eigen::VectorXd x_b_ex(2);
+    x_b_ex << 1, 2, 3;
+    std::cout <<"Soluzione: "<< x_b_ex << "\n";
     auto x_b = gradiente_coniugato(B,b);
     if (!x_b.has_value()){
         std::cerr << "ERRORE: il sistema Bx = b ha restuituito nullopt!\n";
         return EXIT_FAILURE;
     }
-    if (!soluzione_corretta(B,b, x_b.value())){
+    if (!soluzione_corretta(x_b.value(), x_b_ex)){
         std::cerr <<"ERRORE: il metodo del gradiente coniugato ha restituito la soluzione errata!\n";
         return EXIT_FAILURE;
     }
@@ -53,12 +52,13 @@ int main(){
     std::cout << "I = " << I <<"\n";
     Eigen::VectorXd c = Eigen::VectorXd::Random(n);
     std::cout << "c = " << c << "\n";
+    std::cout << "Soluzione: " << c << "\n";
     auto x_i = gradiente_coniugato(I, c);
     if (!x_i.has_value()){
         std::cerr << "ERRORE: il sistema Ix = c ha restuituito nullopt!\n";
         return EXIT_FAILURE;
     }
-    if (!soluzione_corretta(I,c, x_i.value())){
+    if (!soluzione_corretta(x_i.value(), c)){
         std::cerr <<"ERRORE: il metodo del gradiente coniugato ha restituito la soluzione errata!\n";
         return EXIT_FAILURE;
     }
@@ -74,12 +74,14 @@ int main(){
     Eigen::VectorXd d(5);
     d << 4, 2, 7, 1, 5;
     std::cout << "d = " << d << "\n";
+    Eigen::VectorXd x_d_ex = Eigen::VectorXd::Ones(5);
+    std::cout << "Soluzione: " << x_d_ex << "\n";
     auto x_d= gradiente_coniugato(D, d);
     if (!x_d.has_value()){
         std::cerr << "ERRORE: il sistema Dx = d ha restuituito nullopt!\n";
         return EXIT_FAILURE;
     }
-    if (!soluzione_corretta(D,d, x_d.value())){
+    if (!soluzione_corretta(x_d.value(), x_d_ex)){
         std::cerr <<"ERRORE: il metodo del gradiente coniugato ha restituito la soluzione errata!\n";
         return EXIT_FAILURE;
     }
@@ -89,14 +91,17 @@ int main(){
     E << 5.0;
     std::cout << "E = " << E << "\n";
     Eigen::VectorXd e(1);
-    e << 10;
+    e << 10.0;
     std::cout<< "e = " << e << "\n";
+    Eigen::VectorXd x_e_ex(1);
+    x_e_ex << 2.0;
+    std::cout << "Soluzione: " << x_e_ex << "\n";
     auto x_e= gradiente_coniugato(E, e);
     if (!x_e.has_value()){
         std::cerr << "ERRORE: il sistema Ex = e ha restuituito nullopt!\n";
         return EXIT_FAILURE;
     }
-    if (!soluzione_corretta(E,e, x_e.value())){
+    if (!soluzione_corretta(x_e.value(), x_e_ex)){
         std::cerr <<"ERRORE: il metodo del gradiente coniugato ha restituito la soluzione errata!\n";
         return EXIT_FAILURE;
     }
@@ -114,6 +119,16 @@ int main(){
         return EXIT_FAILURE;
     }
     std::cout << "OK: la matrice non quadrata F non ha restituito nulla.\n";
+    //test vettore dei termini noti di dimensione diversa
+    Eigen::VectorXd m(3);
+    m << 3,3,3;
+    std::cout << "m = "<< m << "\n";
+    auto x_m = gradiente_coniugato(I, m);
+    if (x_m.has_value()){
+        std::cerr <<"ERRORE: dimensioni non compatibili tra I (4x4) e m (3), ma il metodo del gradiente coniugato restituisce una soluzione!\n";
+        return EXIT_FAILURE;
+    }
+    std::cout<<"OK: le dimensioni di I e m non sono compatibili, quindi il metodo del gradiente coniugato non restituisce nulla\n";
     //test matrice non simmetrica
     Eigen::MatrixXd G(2,2);
     G << 1,2,
@@ -143,8 +158,8 @@ int main(){
     std::cout <<"OK: la matrice definita negativa non ha restituito nulla.\n";
     //test matrice non definita positiva - semidefinita positiva
     Eigen::MatrixXd J(2,2);
-    J << -1, 0,
-        0, 0; //autovalori -1, 0 (entrambi non positivi)
+    J << 1, 0,
+        0, 0; //autovalori 1, 0 
     std::cout << "J = " << J << "\n";
     Eigen::VectorXd j(2);
     j << 0,0;

@@ -4,13 +4,11 @@
 #include <optional>
 std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::VectorXd& b){
     double tol =1.0e-12; //tolleranza 
-    /*Il check sull'invertibilità della matrice è superfluo dal momento che 
-    una matrice simmetrica e definita positiva è sempre invertibile*/
     //check che la matrice sia quadrata
     const unsigned int n_righe = A.rows(); //n righe
     const unsigned int n_colonne = A.cols(); //n colonne
     if (n_righe != n_colonne){
-        std::cout<<"La matrice non è quadrata!";
+        std::cout<<"La matrice non è quadrata!\n";
         return std::nullopt;
     }
     if (n_righe != b.size()){
@@ -19,10 +17,10 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
     }
     //check che la matrice sia simmetrica
     /*Se A è simmetrica, A = A.transpose(); faccio il check 
-    con una tolleranza*/
+    con una tolleranza dal momento che sto lavorando con dei double e in precisione finita di calcolo*/
     if (!A.isApprox(A.transpose(), tol)){
         //la matrice non è simmetrica --> non posso procedere
-        std::cout<<"La matrice non è simmetrica!";
+        std::cout<<"La matrice non è simmetrica!\n";
         return std::nullopt;
     }
     //Check che la matrice sia definita positiva
@@ -31,10 +29,11 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
     Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> solver(A);
     auto autovalori = solver.eigenvalues();
     if (autovalori.minCoeff()< tol){
-        std::cout << "La matrice non è definita positiva!";
+        std::cout << "La matrice non è definita positiva!\n";
         return std::nullopt;
     }
-    
+    /*Il check sull'invertibilità della matrice è superfluo dal momento che 
+    una matrice simmetrica e definita positiva è sempre invertibile*/
     //creo il vettore x che inizializzo con 0 e che in seguito conterrà la soluzione iterata
     Eigen::VectorXd x = Eigen::VectorXd::Zero(n_righe);
     //creo il vettore residuo
@@ -43,9 +42,6 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
     Eigen::VectorXd p = r;
     /*Se b è uguale a 0, il vettore nullo è soluzione;
     inoltre, in tal caso res è 0, quindi il ciclo non viene mai avviato*/
-    if (b.isZero(tol)){
-        return x;
-    }
     const double res_norm_0 = r.norm(); //valore che utilizzerò nella tolleranza relativa
     const double res_tol = 1.0e-12;
     unsigned int it = 0; //lo uso come "contatore" nel ciclo while
@@ -54,6 +50,11 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
         //dal momento che torneranno utili più volte, valuto: 
         const Eigen::VectorXd Ap = A*p;
         const double pAp = (p.transpose()*Ap).value(); //è il denominatore nella formula di alpha e beta
+        //check che pAp non sia nullo, ovvero che non abbia modulo nullo
+        if (std::abs(pAp) < tol){
+	        std::cout << "Il denominatore nella formula di alpha e beta è nullo\n";
+	        return std::nullopt;
+	    }
         const double alpha = (p.transpose()*r).value()/pAp;
         x = x + alpha*p;
         r = b - A*x;

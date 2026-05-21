@@ -140,6 +140,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named test_soluz_corr
+
+# Build rule for target.
+test_soluz_corr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_soluz_corr
+.PHONY : test_soluz_corr
+
+# fast build rule for target.
+test_soluz_corr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/build
+.PHONY : test_soluz_corr/fast
+
+#=============================================================================
 # Target rules for targets named test_grad_coniug
 
 # Build rule for target.
@@ -200,6 +213,30 @@ test_gradiente_coniugato.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_grad_coniug.dir/build.make CMakeFiles/test_grad_coniug.dir/test_gradiente_coniugato.cpp.s
 .PHONY : test_gradiente_coniugato.cpp.s
 
+test_soluz_corretta.o: test_soluz_corretta.cpp.o
+.PHONY : test_soluz_corretta.o
+
+# target to build an object file
+test_soluz_corretta.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/test_soluz_corretta.cpp.o
+.PHONY : test_soluz_corretta.cpp.o
+
+test_soluz_corretta.i: test_soluz_corretta.cpp.i
+.PHONY : test_soluz_corretta.i
+
+# target to preprocess a source file
+test_soluz_corretta.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/test_soluz_corretta.cpp.i
+.PHONY : test_soluz_corretta.cpp.i
+
+test_soluz_corretta.s: test_soluz_corretta.cpp.s
+.PHONY : test_soluz_corretta.s
+
+# target to generate assembly for a file
+test_soluz_corretta.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_soluz_corr.dir/build.make CMakeFiles/test_soluz_corr.dir/test_soluz_corretta.cpp.s
+.PHONY : test_soluz_corretta.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,12 +248,16 @@ help:
 	@echo "... test"
 	@echo "... main"
 	@echo "... test_grad_coniug"
+	@echo "... test_soluz_corr"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... test_gradiente_coniugato.o"
 	@echo "... test_gradiente_coniugato.i"
 	@echo "... test_gradiente_coniugato.s"
+	@echo "... test_soluz_corretta.o"
+	@echo "... test_soluz_corretta.i"
+	@echo "... test_soluz_corretta.s"
 .PHONY : help
 
 

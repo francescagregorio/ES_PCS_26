@@ -1,29 +1,67 @@
-Start testing: May 20 09:23 UTC
+Start testing: May 21 16:07 UTC
 ----------------------------------------------------------
-1/1 Testing: gradiente_coniugato
-1/1 Test: gradiente_coniugato
+1/2 Testing: soluz_corr
+1/2 Test: soluz_corr
+Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/test_soluz_corr"
+Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build
+"soluz_corr" start time: May 21 16:07 UTC
+Output:
+----------------------------------------------------------
+x_a_11
+2
+x_a_22
+2
+x_b_1 3.1415
+9.26535
+ 8.9793
+x_b_23.14155
+9.26535
+x_c_11.1111e-05
+2.2222e-05
+3.3333e-05
+         0
+x_c_23.14155
+9.26535
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"soluz_corr" end time: May 21 16:07 UTC
+"soluz_corr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: gradiente_coniugato
+2/2 Test: gradiente_coniugato
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/test_grad_coniug"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build
-"gradiente_coniugato" start time: May 20 09:23 UTC
+"gradiente_coniugato" start time: May 21 16:07 UTC
 Output:
 ----------------------------------------------------------
 A = 4 1
 1 3
 a = 6
 7
+Soluzione: 1
+2
 Il sistema 2x2 Ax = a ha restituito il risultato corretto
 B = 4 1 0
 1 4 1
 0 1 4
-b =  8
+b =  6
 12
-13
+14
+Soluzione: 1
+2
 Il sistema 3x3 Bx = b ha restituito il risultato corretto
 I = 1 0 0 0
 0 1 0 0
 0 0 1 0
 0 0 0 1
 c =  0.680375
+-0.211234
+ 0.566198
+  0.59688
+Soluzione:  0.680375
 -0.211234
  0.566198
   0.59688
@@ -38,34 +76,49 @@ d = 4
 7
 1
 5
+Soluzione: 1
+1
+1
+1
+1
 Il sistema 5x5 Dx = d ha restituito il risultato corretto
 E = 5
 e = 10
+Soluzione: 2
 Il sistema 1x1 Ex = e ha restituito il risultato corretto
 F = 1 2 3
 3 2 1
-f = 9.26894e-310
+f = 9.26897e-310
            0
-La matrice non è quadrata!OK: la matrice non quadrata F non ha restituito nulla.
+La matrice non è quadrata!
+OK: la matrice non quadrata F non ha restituito nulla.
+m = 3
+3
+3
+Dimensioni della matrice e del vettore termine noto incompatibili!
+OK: le dimensioni di I e m non sono compatibili, quindi il metodo del gradiente coniugato non restituisce nulla
 G = 1 2
 3 4
-La matrice non è simmetrica!OK: la matrice non simmetrica G non ha restituito nulla.
+La matrice non è simmetrica!
+OK: la matrice non simmetrica G non ha restituito nulla.
 H = -1  0
  0 -1
 h = 0
 0
-La matrice non è definita positiva!OK: la matrice definita negativa non ha restituito nulla.
-J = -1  0
- 0  0
+La matrice non è definita positiva!
+OK: la matrice definita negativa non ha restituito nulla.
+J = 1 0
+0 0
 j = 0
 0
-La matrice non è definita positiva!OK: la matrice semidefinita positiva non ha restituito nulla.
+La matrice non è definita positiva!
+OK: la matrice semidefinita positiva non ha restituito nulla.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"gradiente_coniugato" end time: May 20 09:23 UTC
+"gradiente_coniugato" end time: May 21 16:07 UTC
 "gradiente_coniugato" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 20 09:23 UTC
+End testing: May 21 16:07 UTC
