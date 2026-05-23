@@ -28,7 +28,8 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
     Uso la funzione SelfAdjointEigenSolver per valutare gli autovalori di A (simmetrica)*/
     Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> solver(A);
     auto autovalori = solver.eigenvalues();
-    if (autovalori.minCoeff()< tol){
+    const double tol2 = 1e-12;
+    if (autovalori.minCoeff()< tol2){
         std::cout << "La matrice non è definita positiva!\n";
         return std::nullopt;
     }
@@ -67,6 +68,9 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
         const double beta = (Ap.transpose()*r).value()/pAp;
         p = r - beta*p;
         it++;
+    }
+    if (it == 10*n_righe){
+        std::cout << "In " << 10*n_righe << " iterazioni la convergenza non è stata raggiunta\n";
     }
     return x;
 }
