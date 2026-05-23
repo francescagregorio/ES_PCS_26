@@ -33,7 +33,7 @@ int main(){
     Eigen::VectorXd b(3);
     b << 6, 12, 14;
     std::cout << "b = " << b << "\n";
-    Eigen::VectorXd x_b_ex(2);
+    Eigen::VectorXd x_b_ex(3);
     x_b_ex << 1, 2, 3;
     std::cout <<"Soluzione: "<< x_b_ex << "\n";
     auto x_b = gradiente_coniugato(B,b);
@@ -112,6 +112,7 @@ int main(){
         3, 2, 1;
     std::cout << "F = " << F << "\n";
     Eigen::VectorXd f(2);
+    f << 3,2;
     std::cout << "f = " << f <<"\n";
     auto x_f = gradiente_coniugato(F,f);
     if (x_f.has_value()){

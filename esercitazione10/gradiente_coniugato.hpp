@@ -3,10 +3,10 @@
 #include "Eigen/Eigen"
 #include <optional>
 std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::VectorXd& b){
-    double tol =1.0e-12; //tolleranza 
+    double tol = 1e-10; //tolleranza 
     //check che la matrice sia quadrata
-    const unsigned int n_righe = A.rows(); //n righe
-    const unsigned int n_colonne = A.cols(); //n colonne
+    const Eigen::Index n_righe = A.rows(); //n righe
+    const Eigen::Index n_colonne = A.cols(); //n colonne
     if (n_righe != n_colonne){
         std::cout<<"La matrice non è quadrata!\n";
         return std::nullopt;
@@ -43,9 +43,13 @@ std::optional<Eigen::VectorXd> gradiente_coniugato(Eigen::MatrixXd& A, Eigen::Ve
     /*Se b è uguale a 0, il vettore nullo è soluzione;
     inoltre, in tal caso res è 0, quindi il ciclo non viene mai avviato*/
     const double res_norm_0 = r.norm(); //valore che utilizzerò nella tolleranza relativa
-    const double res_tol = 1.0e-12;
+    const double res_tol = 1e-11;
     unsigned int it = 0; //lo uso come "contatore" nel ciclo while
-    while(it < n_righe && r.norm()>res_tol*res_norm_0){
+    while(it < 10* n_righe && r.norm()>res_tol*res_norm_0){ 
+        /*In aritmetica floating point, la convergenza non è garantita in al più n passi;
+        fissiamo una condizione sul numero massimo di iterazioni (10*n_righe) E una 
+        sulla norma del residuo. Usiamo entrambi per evitare loop infiniti nel caso in cui 
+        la norma del residuo non scenda mai al di sotto della soglia */
         //in c++ le moltiplicazioni sono più veloci delle divisioni
         //dal momento che torneranno utili più volte, valuto: 
         const Eigen::VectorXd Ap = A*p;

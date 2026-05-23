@@ -1,10 +1,10 @@
-Start testing: May 21 16:07 UTC
+Start testing: May 23 13:32 UTC
 ----------------------------------------------------------
 1/2 Testing: soluz_corr
 1/2 Test: soluz_corr
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/test_soluz_corr"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build
-"soluz_corr" start time: May 21 16:07 UTC
+"soluz_corr" start time: May 23 13:32 UTC
 Output:
 ----------------------------------------------------------
 x_a_11
@@ -16,17 +16,18 @@ x_b_1 3.1415
  8.9793
 x_b_23.14155
 9.26535
+8.97935
 x_c_11.1111e-05
 2.2222e-05
 3.3333e-05
-         0
 x_c_23.14155
 9.26535
+8.97935
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"soluz_corr" end time: May 21 16:07 UTC
+"soluz_corr" end time: May 23 13:32 UTC
 "soluz_corr" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,7 +35,7 @@ Test Passed.
 2/2 Test: gradiente_coniugato
 Command: "/home/pcsdocker/Data/ES_PCS_26/esercitazione10/build/test_grad_coniug"
 Directory: /home/pcsdocker/Data/ES_PCS_26/esercitazione10/build
-"gradiente_coniugato" start time: May 21 16:07 UTC
+"gradiente_coniugato" start time: May 23 13:32 UTC
 Output:
 ----------------------------------------------------------
 A = 4 1
@@ -52,6 +53,7 @@ b =  6
 14
 Soluzione: 1
 2
+3
 Il sistema 3x3 Bx = b ha restituito il risultato corretto
 I = 1 0 0 0
 0 1 0 0
@@ -88,8 +90,8 @@ Soluzione: 2
 Il sistema 1x1 Ex = e ha restituito il risultato corretto
 F = 1 2 3
 3 2 1
-f = 9.26897e-310
-           0
+f = 3
+2
 La matrice non è quadrata!
 OK: la matrice non quadrata F non ha restituito nulla.
 m = 3
@@ -117,8 +119,8 @@ OK: la matrice semidefinita positiva non ha restituito nulla.
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"gradiente_coniugato" end time: May 21 16:07 UTC
+"gradiente_coniugato" end time: May 23 13:32 UTC
 "gradiente_coniugato" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 21 16:07 UTC
+End testing: May 23 13:32 UTC
