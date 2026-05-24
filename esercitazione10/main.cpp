@@ -14,4 +14,15 @@ int main(){
     if(x.has_value()){
         std::cout << "Soluzione: x = "<< *x << "\n";
     }
+    Eigen::MatrixXd G(2,2);
+    G << 1,2,
+        3,4;
+    std::cout << "G = " << G << "\n";
+    Eigen::VectorXd g(2);
+    g << 0,0;
+    auto x_g = gradiente_coniugato(G,g);
+    if (!x_g.has_value()){
+        std::cout << "OK: la matrice non simmetrica G non ha restituito nulla.\n";
+    }
+    return 0;
 }
