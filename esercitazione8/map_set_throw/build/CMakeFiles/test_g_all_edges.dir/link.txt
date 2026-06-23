@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wshadow -Werror=vla -Wl,--dependency-file=CMakeFiles/test_g_all_edges.dir/link.d CMakeFiles/test_g_all_edges.dir/test_graph_all_edges.cpp.o -o test_g_all_edges
