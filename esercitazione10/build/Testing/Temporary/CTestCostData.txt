@@ -1,3 +1,0 @@
-gradiente_coniugato 14 0.000131408
-soluz_corr 6 0.000277014
----
